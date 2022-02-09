@@ -1,5 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""               
-"               
+
 "               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
 "               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
 "               ██║   ██║██║██╔████╔██║██████╔╝██║     
@@ -54,6 +53,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
 call plug#end()
 
 " }}}
@@ -98,7 +98,7 @@ noremap <c-right> <c-w><
 
 "NERDTree
 
-autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " }}}
