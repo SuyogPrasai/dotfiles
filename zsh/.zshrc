@@ -105,10 +105,10 @@ source $ZSH/oh-my-zsh.sh
 
 # GENERAL ALIASES
 alias gvim="gvim.exe"
-alias home="cd /mnt/c/Users/suyog/"
-alias desktop="cd /mnt/c/Users/suyog/desktop"
-alias downloads="cd /mnt/c/Users/suyog/downloads/"
-alias screenshots="cd /mnt/c/Users/suyog/pictures/screenshots/"
+alias home="cd /mnt/c/Users/viper/"
+alias desktop="cd /mnt/c/Users/viper/desktop"
+alias downloads="cd /mnt/c/Users/viper/downloads/"
+alias screenshots="cd /mnt/c/Users/viper/pictures/screenshots/"
 alias vlc="vlc.exe"
 alias chrome="chrome.exe"
 alias brave="brave.exe"
