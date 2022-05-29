@@ -112,6 +112,7 @@ alias screenshots="cd /mnt/c/Users/viper/pictures/screenshots/"
 alias vlc="vlc.exe"
 alias chrome="chrome.exe"
 alias brave="brave.exe"
+alias rs="retroarch.exe"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
