@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 neofetch
-alias la='ls -la'
-alias ls='ls --color=auto'
+
+alias ls='exa -al --color=always --group-directories-first'
 PS1='[\u@\h \W]\$ '
 
