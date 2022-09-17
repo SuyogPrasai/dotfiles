@@ -47,27 +47,28 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
--- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = "vim"
 editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
+browser = "firefox"
+fmanager = "pcmanfm"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
+    -- awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.top,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.max,
+    -- awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.magnifier,
+    -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -77,15 +78,24 @@ awful.layout.layouts = {
 -- {{{ Menu
 -- Create a launcher widget and a main menu
 myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
+   { " Hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+   { " Manual", terminal .. " -e man awesome" },
+   { " Edit config", editor_cmd .. " " .. awesome.conffile },
+   { " Restart", awesome.restart },
+   { " Quit", function() awesome.quit() end },
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+beautiful.menu_height=25 
+beautiful.menu_width=180
+beautiful.menu_bg_normal="#374247"
+beautiful.menu_bg_focus="#f7f4e0"
+beautiful.menu_fg_focus="#374247"
+-- beautiful.menu_fg_normal=""
+
+mymainmenu = awful.menu({ items = { { " Awesome", myawesomemenu,},
+                                    { " Open terminal", terminal },
+                                    { " Browser", browser },
+                                    { " File Manager", fmanager }
                                   }
                         })
 
@@ -484,7 +494,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -556,10 +566,11 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
+--GAPS window 
+beautiful.useless_gap=10
 -- Auto start application
 
 awful.spawn.with_shell("lxsession")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("picom --experimental-backend")
+awful.spawn.with_shell("picom --experimental-backend --config ~/picom.conf")
 
