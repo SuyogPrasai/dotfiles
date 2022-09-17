@@ -4,10 +4,10 @@
 # requires https://github.com/jonaburg/picom
 # (These are also the default values)
 transition-length = 300
-transition-pow-x = 0.5
-transition-pow-y = 0.5
-transition-pow-w = 0.5
-transition-pow-h = 0.5
+transition-pow-x = 0.1
+transition-pow-y = 0.1
+transition-pow-w = 0.1
+transition-pow-h = 0.1
 size-transition = true
 
 
@@ -15,7 +15,7 @@ size-transition = true
 #             Corners           #
 #################################
 # requires: https://github.com/sdhand/compton or https://github.com/jonaburg/picom
-corner-radius = 20;
+corner-radius = 25.0;
 rounded-corners-exclude = [
   #"window_type = 'normal'",
   "class_g = 'awesome'",
@@ -25,13 +25,9 @@ rounded-corners-exclude = [
   "class_g = 'Alacritty'",
   "class_g = 'Polybar'",
   "class_g = 'code-oss'",
-  "class_g = 'Dunst'",
   #"class_g = 'TelegramDesktop'",
   "class_g = 'firefox'",
-  "class_g = 'Thunderbird'",
-  "class_g = 'Zathura'",
-  "class_g = 'Nemo'",
-  "class_g = 'dmenu'"
+  "class_g = 'Thunderbird'"
 
 ];
 round-borders = 1;
@@ -50,7 +46,7 @@ round-borders-exclude = [
 # unless explicitly requested using the wintypes option.
 #
 # shadow = false
-shadow = true;
+shadow = false;
 
 # The blur radius for shadows, in pixels. (defaults to 12)
 # shadow-radius = 12
@@ -144,7 +140,7 @@ fade-in-step = 0.03;
 fade-out-step = 0.03;
 
 # The time between steps in fade step, in milliseconds. (> 0, defaults to 10)
-fade-delta = 5
+# fade-delta = 10
 
 # Specify a list of conditions of windows that should not be faded.
 # don't need this, we disable fading for all normal windows with wintypes: {}
@@ -222,11 +218,10 @@ opacity-rule = [
   "80:class_g     = 'Polybar'",
   "100:class_g    = 'code-oss'",
   "100:class_g    = 'Meld'",
-  "100:class_g    = 'TelegramDesktop'",
+  "70:class_g     = 'TelegramDesktop'",
   "90:class_g     = 'Joplin'",
   "100:class_g    = 'firefox'",
-  "100:class_g    = 'Thunderbird'",
-  "80:class_g     = 'tabbed'"
+  "100:class_g    = 'Thunderbird'"
 
 ];
 
@@ -271,7 +266,7 @@ blur: {
   # requires: https://github.com/ibhagwan/picom
   method = "kawase";
   #method = "kernel";
-  strength = 0;
+  strength = 7;
   # deviation = 1.0;
   # kernel = "11x11gaussian";
   background = false;
@@ -291,7 +286,6 @@ blur-background-exclude = [
   # when taking selection screenshot with `main`
   # https://github.com/naelstrof/maim/issues/130
   "class_g = 'slop'",
-  "class_g = 'Alacritty'",
   "_GTK_FRAME_EXTENTS@:c"
 
 ];
@@ -344,8 +338,8 @@ detect-client-opacity = true;
 # Specify refresh rate of the screen. If not specified or 0, picom will 
 # try detecting this with X RandR extension.
 #
-refresh-rate = 60
-# refresh-rate = 0
+# refresh-rate = 60
+refresh-rate = 0
 
 # Limit picom to repaint at most once every 1 / 'refresh_rate' second to 
 # boost performance. This should not be used with 
@@ -517,11 +511,11 @@ log-level = "info";
 #
 wintypes:
 {
-  normal = { fade = true; shadow = true;  }
-  tooltip = { fade = true; shadow = true; opacity = 1; focus = true; full-shadow = false;  };
+  normal = { fade = false; shadow = false;  }
+  tooltip = { fade = true; shadow = true; opacity = 0.75; focus = true; full-shadow = false;  };
   dock = { shadow = false;  }
   dnd = { shadow = false;  }
-  popup_menu = { opacity = 1; fade = false;  }
-  dropdown_menu = { opacity = 1; fade = false;  }
+  popup_menu = { opacity = 0.8;  }
+  dropdown_menu = { opacity = 0.8;  }
 
 };

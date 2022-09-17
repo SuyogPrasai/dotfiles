@@ -572,5 +572,5 @@ beautiful.useless_gap=10
 
 awful.spawn.with_shell("lxsession")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("picom --experimental-backend --config ~/picom.conf")
+awful.spawn.with_shell("picom --experimental-backend")
 
