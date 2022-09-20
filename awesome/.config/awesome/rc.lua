@@ -534,13 +534,13 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
     --]]
-    --[[ dmenu
-    awful.key({ modkey }, "x", function ()
+    -- dmenu
+    awful.key({ modkey }, "p", function ()
             os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
             beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
         end,
-        {description = "show dmenu", group = "launcher"}),
-    --]]
+        {description = "show dmenu", group = "launcher"})
+    --
     -- alternatively use rofi, a dmenu-like application with more features
     -- check https://github.com/DaveDavenport/rofi for more details
     --[[ rofi
@@ -550,7 +550,7 @@ globalkeys = mytable.join(
         end,
         {description = "show rofi", group = "launcher"}),
     --]]
-    -- Prompt
+    --[[ Prompt
     awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end,
               {description = "run prompt", group = "launcher"}),
 
