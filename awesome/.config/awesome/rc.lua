@@ -828,7 +828,7 @@ autorunApps =
    "lxsession",
    "nitrogen --restore",
    "picom --experimental-backend",
-   "/usr/bin/emacs --daemon",
+-- "/usr/bin/emacs --daemon",
 }
 if autorun then
    for app = 1, #autorunApps do
