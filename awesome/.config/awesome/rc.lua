@@ -1,6 +1,15 @@
--- My AWESOME CONFIG
--- SUYOG PRASAI
 
+
+█████╗ ██╗    ██╗███████╗███████╗ ██████╗ ███╗   ███╗███████╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+ ██╔══██╗██║    ██║██╔════╝██╔════╝██╔═══██╗████╗ ████║██╔════╝    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+ ███████║██║ █╗ ██║█████╗  ███████╗██║   ██║██╔████╔██║█████╗      ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+ ██╔══██║██║███╗██║██╔══╝  ╚════██║██║   ██║██║╚██╔╝██║██╔══╝      ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+ ██║  ██║╚███╔███╔╝███████╗███████║╚██████╔╝██║ ╚═╝ ██║███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+ ╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
+                                                                                                                  
+-- My awesome config
+--  github-page      https://github.com/suyogprasai
+--  dotfiles           https://github.com/suyogprasai/dotfiles
 
 -- {{{ Required libraries
 
@@ -106,8 +115,7 @@ local browser      = "firefox"
 awful.util.terminal = terminal
 awful.util.tagnames = {  "  ", "  ", "  ", "  ", "  ", "  ",}
 -- awful.util.tagnames = { " DEV ", " WWW ", " SYS ", " DOC ", " VBOX ", " CHAT ", " MUS ", " VID ", " GFX "  }
--- awful.util.tagnames = { "1", "2", "3", "4", "5"  }
-awful.layout.suit.tile.left.mirror = true
+-- awful.util.tagnames = { "1", "2", "3", "4", "5"  } awful.layout.suit.tile.left.mirror = true
 
 awful.layout.layouts = {
   
