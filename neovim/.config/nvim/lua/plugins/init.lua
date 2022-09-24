@@ -31,13 +31,5 @@ return require'packer'.startup(function()
     use 'RRethy/nvim-base16'
     use 'kyazdani42/nvim-palenight.lua'
 
-      -- Which key
-    use {
-        "folke/which-key.nvim",
-        config = function()
-            require("which-key").setup {
-        }
-        end
-    }
 
 end)

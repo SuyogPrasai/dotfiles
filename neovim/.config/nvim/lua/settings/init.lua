@@ -1,12 +1,11 @@
 local set = vim.opt
 
-
 -- Better Editing
 set.expandtab = true
 set.smarttab = true
 set.shiftwidth = 4
 set.tabstop = 4
-set.list = true
+-- set.list = true
 
 -- Search
 set.hlsearch = true
