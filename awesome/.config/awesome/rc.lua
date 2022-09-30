@@ -111,6 +111,7 @@ local vi_focus     = false -- vi-like client focus https://github.com/lcpz/aweso
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "nvim"
 local browser      = "firefox"
+local emacs        = "emacsclient -c -a 'emacs'"
 
 awful.util.terminal = terminal
 awful.util.tagnames = {  "  ", "  ", "  ", "  ", "  ", "  ",}
@@ -537,6 +538,10 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "b", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
 
+
+    awful.key({ modkey }, "e", function () awful.spawn(emacs) end ,
+              {description  = "launches emacs" , group = "launcher" }),
+
     -- Default
     --[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -836,7 +841,7 @@ autorunApps =
    "lxsession",
    "nitrogen --restore",
    "picom --experimental-backend",
--- "/usr/bin/emacs --daemon",
+   "/usr/bin/emacs --daemon",
 }
 if autorun then
    for app = 1, #autorunApps do
