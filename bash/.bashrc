@@ -13,7 +13,7 @@ export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in termina
 export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
 
 
-neofetch #neofetch at start
+# neofetch #neofetch at start
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -26,10 +26,10 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 # Getting fastest mirros
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+# alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+# alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+# alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+# alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 ### SHOPT
 shopt -s autocd # change to named directory
@@ -43,21 +43,21 @@ shopt -s checkwinsize # checks term size when bash regains control
 # vim and emacs
 alias vim="nvim"
 alias em="/usr/bin/emacs -nw"
-alias emacs="emacsclient -c -a 'emacs'"
-alias doomsync="~/.emacs.d/bin/doom sync"
-alias doomdoctor="~/.emacs.d/bin/doom doctor"
-alias doomupgrade="~/.emacs.d/bin/doom upgrade"
-alias doompurge="~/.emacs.d/bin/doom purge"
+# alias emacs="emacsclient -c -a 'emacs'"
+# alias doomsync="~/.emacs.d/bin/doom sync"
+# alias doomdoctor="~/.emacs.d/bin/doom doctor"
+# alias doomupgrade="~/.emacs.d/bin/doom upgrade"
+# alias doompurge="~/.emacs.d/bin/doom purge"
 
 # pacman and yay
-alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
-alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
-alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
+# alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
+# alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
+# alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
+# alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+# alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
+# alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
+# alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
+# alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
