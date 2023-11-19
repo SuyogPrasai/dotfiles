@@ -29,3 +29,10 @@ set.showmatch = true
 set.inccommand = "split"
 set.splitbelow = "splitright"
 set.termguicolors = true
+
+vim.api.nvim_exec([[
+    augroup transparent_background
+        autocmd!
+        autocmd VimEnter * hi Normal guibg=NONE ctermbg=NONE
+    augroup END
+]], false)
